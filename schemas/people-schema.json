@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "PullRequest personal user profile",
+  "default": {},
+  "examples": [
+    {
+      "name": "מיכל פורג",
+      "github": "MichalPorag",
+      "facebook": "https://www.facebook.com/miporagi",
+      "twitter": "https://twitter.com/MichalPorag",
+      "linkedin": "https://www.linkedin.com/in/michal-porag-9522b5142/",
+      "website": "https://medium.com/@miporagi",
+      "description": "אני מיכל פורג, מפתחת פולסטאק ב-Skillset, סטודנטית למדעי המחשב באוניברסיטה הפתוחה ומנהלת את קהילת PullRequest. אני תורמת קוד בעיקר לפרויקט \"הייתי_שם\", זה אתר שמנציח עדויות של נפגעי אלימות במערכות יחסים מכל סוג ומקשר בינם לבין גורמים שיכולים לעזור להם (עוד בשלבי בנייה). אני אוהבת לצייר, לקרוא וחתולים."
+    }
+  ],
+  "required": ["name", "github", "description"],
+  "properties": {
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "Full name",
+      "description": "Your full name, in Hebrew",
+      "examples": ["מיכל פורג"]
+    },
+    "github": {
+      "$id": "#/properties/github",
+      "type": "string",
+      "title": "GitHub Username",
+      "pattern": "^[A-Za-z\\d](?:[A-Za-z\\d]|-(?=[A-Za-z\\d])){0,38}$",
+      "description": "Your GitHub username",
+      "examples": ["MichalPorag"]
+    },
+    "facebook": {
+      "$id": "#/properties/facebook",
+      "type": "string",
+      "title": "Your Facebook profile URL",
+      "format": "uri",
+      "examples": ["https://www.facebook.com/miporagi"]
+    },
+    "twitter": {
+      "$id": "#/properties/twitter",
+      "type": "string",
+      "title": "Your Twitter profile URL",
+      "format": "uri",
+      "examples": ["https://twitter.com/MichalPorag"]
+    },
+    "linkedin": {
+      "$id": "#/properties/linkedin",
+      "type": "string",
+      "title": "Your LinkedIn Page",
+      "format": "uri",
+      "examples": ["https://www.linkedin.com/in/michal-porag-9522b5142/"]
+    },
+    "website": {
+      "$id": "#/properties/website",
+      "type": "string",
+      "title": "Personal blog / website",
+      "description": "Your personal blog or website (it has to be about you)",
+      "format": "uri",
+      "examples": ["https://medium.com/@miporagi"]
+    },
+    "description": {
+      "$id": "#/properties/description",
+      "type": "string",
+      "title": "Personal introduction",
+      "description": "Technologies that you love, hobbies, fun-facts, and anything that you are passionate about. Are you an architect? Do you speak Chinese? Studied amusement park and roller coaster engineering? This is the place to brag!",
+      "examples": [
+        "אני מיכל פורג, מפתחת פולסטאק ב-Skillset, סטודנטית למדעי המחשב באוניברסיטה הפתוחה ומנהלת את קהילת PullRequest. אני תורמת קוד בעיקר לפרויקט \"הייתי_שם\", זה אתר שמנציח עדויות של נפגעי אלימות במערכות יחסים מכל סוג ומקשר בינם לבין גורמים שיכולים לעזור להם (עוד בשלבי בנייה). אני אוהבת לצייר, לקרוא וחתולים."
+      ]
+    }
+  },
+  "additionalProperties": true
+}
