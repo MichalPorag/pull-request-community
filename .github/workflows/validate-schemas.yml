@@ -1,0 +1,16 @@
+name: Validate JSONs on PR
+on: [pull_request]
+jobs:
+  validate_schemas:
+    name: Validate JSON Schemas
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Validate People JSON schema
+        uses: snapcart/json-schema-validator@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          json_schema: ./schemas/people-schema.json
+          json_path_pattern: ^people/.+\.json$
+          send_comment: true
+          clear_comments: true
