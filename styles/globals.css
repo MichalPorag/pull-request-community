@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 html,
 body {
   padding: 0;
@@ -7,11 +13,44 @@ body {
   direction: rtl;
 }
 
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(#EFA6A1, #295DC1);
+}
+
 a {
-  color: #0070f3;
+  color: #295DC1;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+img {
+  font-size: 16px;
+  height: 10em;
+  width: 10em;
+  border-radius: 20%;
+}
+
+article {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  padding: 16px 12px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 1rem;
+}
+
+article > * {
+  margin: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0 10%;
 }

@@ -27,22 +27,27 @@ export default function Home({ people }: IHomeProps) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          קהילת <a href="http://facebook.com/groups/pullrequest">Pull Request</a>
-        </h1>
+        <nav className={styles.nav}>
+          <h1 className={styles.title}>
+            קהילת <a href="http://facebook.com/groups/pullrequest">Pull Request</a>
+          </h1>
 
-        <a
-          href="https://github.com/urish/pull-request-community#adding-your-profile"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.githubButton}
-        >
-          <Icon path={mdiGithub} size={1} /> הוסיפו את עצמכם
-        </a>
-
-        {fitleredPeople.map((person) => (
-          <PersonCard key={person.github} person={person} />
-        ))}
+          <a
+            href="https://github.com/urish/pull-request-community#adding-your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.githubButton}
+          >
+            <Icon path={mdiGithub} size={1} /> הוסיפו את עצמכם
+          </a>
+        </nav>
+        <div className={styles.membersWarper}>
+          <ul className={styles.membersContainer}>
+            {fitleredPeople.map((person) => (
+              <PersonCard key={person.github} person={person} />
+            ))}
+          </ul>
+        </div>
       </main>
     </div>
   );
