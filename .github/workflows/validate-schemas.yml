@@ -12,5 +12,3 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           json_schema: ./schemas/people-schema.json
           json_path_pattern: ^people/.+\.json$
-          send_comment: true
-          clear_comments: true
