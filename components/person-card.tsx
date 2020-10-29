@@ -8,8 +8,9 @@ interface IPersonProps {
 }
 
 export function PersonCard({ person }: IPersonProps) {
+  const personColor = `rgba(${person.colors[0]}, ${person.colors[1]}, ${person.colors[2]}, 0.4)`;
   return (
-    <article id={`profile-${person.github}`}>
+    <article id={`profile-${person.github}`} style={{ ['--backgroundColor' as any]: personColor }}>
       <section>
         <img src={`https://github.com/${person.github}.png?size=200`} className={styles.avatar} />
         <h2>{person.name}</h2>

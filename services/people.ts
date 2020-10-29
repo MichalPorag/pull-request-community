@@ -6,6 +6,7 @@ export interface IPerson {
   facebook?: string;
   website?: string;
   linkedin?: string;
+  colors?: number[];
 }
 
 export function getPeople() {

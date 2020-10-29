@@ -3,5 +3,10 @@
   "github": "urish",
   "twitter": "https://twitter.com/UriShaked",
   "website": "https://urish.org/",
-  "description": "אוהב ליצור דברים. כאן בשבילכם :-) חלק מצוות קהילת Pull Request."
+  "description": "אוהב ליצור דברים. כאן בשבילכם :-) חלק מצוות קהילת Pull Request.",
+  "colors": [
+    255,
+    255,
+    255
+  ]
 }

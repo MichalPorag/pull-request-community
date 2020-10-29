@@ -3,5 +3,10 @@
   "github": "zivkaziv",
   "facebook": "https://www.facebook.com/profile.php?id=539387662",
   "linkedin": "https://www.linkedin.com/in/ziv-k-58939b18/",
-  "description": "אוהב לקודד ולרוץ, לא בהכרח בסדר הזה..."
+  "description": "אוהב לקודד ולרוץ, לא בהכרח בסדר הזה...",
+  "colors": [
+    255,
+    255,
+    255
+  ]
 }
