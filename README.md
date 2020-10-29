@@ -4,6 +4,32 @@
 
 ## Adding your profile
 
+### What to write?
+
+First of all, please write in Hebrew. Share things that will help other people know what makes
+you unique: hobbies, talents, fun-facts, technologies that you love.
+
+Here are some examples of things that can fit well:
+
+✅ מדברת סינית שוטפת  
+✅ מתנדב במד"א  
+✅ חובבת מושבעת של בדיקות אוטומטיות וקוד מסודר  
+✅ אוהב לאפות עוגות וקינוחים  
+✅ לשעבר תלמיד ישיבה  
+✅ מנגנת בחליל פן  
+✅ גולש רוח וגלים וצולל בכל הזדמנות אפשרית  
+✅ מתנדבת בשיקודס
+✅ בזמני הפנוי אוהב לתופף, להקליט ולהופיע עם הלהקה שלי
+
+And these are examples of things that don't really add value, they may sound "smart" but when
+other people read it, it doesn't help them connect with you:
+
+🚫 אוהב לקודד ולישון, לא בהכרח בסדר הזה  
+🚫 It's okay password, I'm insecure too  
+🚫 מחליף תחביבים כל שבוע, מוזמנים לשאול אותי מה הפעם.
+
+### The technical stuff
+
 You can add / update your personal profile by creating a Pull Request to this repo:
 
 1. Create a new JSON file in the [people](people/) directory, and name it as your GitHub username.  
