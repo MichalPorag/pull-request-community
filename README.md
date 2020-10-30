@@ -18,7 +18,7 @@ Here are some examples of things that can fit well:
 ✅ לשעבר תלמיד ישיבה  
 ✅ מנגנת בחליל פן  
 ✅ גולש רוח וגלים וצולל בכל הזדמנות אפשרית  
-✅ מתנדבת בשיקודס
+✅ מתנדבת בשיקודס  
 ✅ בזמני הפנוי אוהב לתופף, להקליט ולהופיע עם הלהקה שלי
 
 And these are examples of things that don't really add value, they may sound "smart" but when
