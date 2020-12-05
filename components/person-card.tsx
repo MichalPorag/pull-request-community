@@ -48,8 +48,8 @@ export function PersonCard({ person }: IPersonProps) {
       </a>
       {Object.entries(icons)
         .filter(([key]) => key !== 'undefined')
-        .map(([, value]) => (
-          <IconLinked color={value?.color} href={value.href} icon={value.icon} />
+        .map(([key, value]) => (
+          <IconLinked color={value?.color} href={value.href} icon={value.icon} key={key} />
         ))}
     </article>
   );
