@@ -2,15 +2,41 @@ import { mdiFacebook, mdiGithub, mdiLinkedin, mdiStackOverflow, mdiTwitter, mdiW
 import Icon from '@mdi/react';
 import { IPerson } from '../services/people';
 import styles from './person-card.module.css';
+import { IconLinked, IIconLinked } from './icon-linked';
 
 interface IPersonProps {
   person: IPerson;
 }
-
 export function PersonCard({ person }: IPersonProps) {
   const style = {
     flex: '1 0 21%',
     margin: 5,
+  };
+  const icons: Record<string, IIconLinked> = {
+    [person.twitter]: {
+      color: '#55ACEE',
+      href: person.twitter,
+      icon: mdiTwitter,
+    },
+    [person.linkedin]: {
+      color: '#006192',
+      href: person.linkedin,
+      icon: mdiLinkedin,
+    },
+    [person.website]: {
+      href: person.website,
+      icon: mdiWeb,
+    },
+    [person.facebook]: {
+      color: '#1778F2',
+      href: person.facebook,
+      icon: mdiFacebook,
+    },
+    [person.stackoverflow]: {
+      color: '#FF9C11',
+      href: person.stackoverflow,
+      icon: mdiStackOverflow,
+    },
   };
   return (
     <article id={`profile-${person.github}`} style={style}>
@@ -18,33 +44,13 @@ export function PersonCard({ person }: IPersonProps) {
       <img src={`https://github.com/${person.github}.png?size=200`} className={styles.avatar} />
       <p>{person.description}</p>
       <a href={`https://github.com/${person.github}`} target="_blank" rel="noopener noreferrer">
-        <Icon path={mdiGithub} size={1.5} />
+        <Icon path={mdiGithub} size={1.5} color="#211F1F" />
       </a>
-      {person.twitter && (
-        <a href={person.twitter} target="_blank" rel="noopener noreferrer">
-          <Icon path={mdiTwitter} size={1.5} />
-        </a>
-      )}
-      {person.linkedin && (
-        <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
-          <Icon path={mdiLinkedin} size={1.5} />
-        </a>
-      )}
-      {person.website && (
-        <a href={person.website} target="_blank" rel="noopener noreferrer">
-          <Icon path={mdiWeb} size={1.5} />
-        </a>
-      )}
-      {person.facebook && (
-        <a href={person.facebook} target="_blank" rel="noopener noreferrer">
-          <Icon path={mdiFacebook} size={1.5} />
-        </a>
-      )}
-      {person.stackoverflow && (
-        <a href={person.stackoverflow} target="_blank" rel="noopener noreferrer">
-          <Icon path={mdiStackOverflow} size={1.5} />
-        </a>
-      )}
+      {Object.entries(icons)
+        .filter(([key]) => key !== 'undefined')
+        .map(([, value]) => (
+          <IconLinked color={value?.color} href={value.href} icon={value.icon} />
+        ))}
     </article>
   );
 }
