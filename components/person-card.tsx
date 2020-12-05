@@ -8,8 +8,12 @@ interface IPersonProps {
 }
 
 export function PersonCard({ person }: IPersonProps) {
+  const style = {
+    flex: '1 0 21%',
+    margin: 5,
+  };
   return (
-    <article id={`profile-${person.github}`}>
+    <article id={`profile-${person.github}`} style={style}>
       <h2>{person.name}</h2>
       <img src={`https://github.com/${person.github}.png?size=200`} className={styles.avatar} />
       <p>{person.description}</p>

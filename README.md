@@ -73,7 +73,7 @@ Open the project in [https://githubbox.com/urish/pull-request-community](CodeSan
 
 ### Locally
 
-First, make sure you have all the depenedencies installed by running
+First, make sure you have all the dependencies installed by running
 
 ```bash
 npm install
