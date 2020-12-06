@@ -1,5 +1,3 @@
-import { mdiGithub } from '@mdi/js';
-import Icon from '@mdi/react';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -31,18 +29,30 @@ export default function Home({ people }: IHomeProps) {
           קהילת <a href="http://facebook.com/groups/pullrequest">Pull Request</a>
         </h1>
 
-        <a
-          href="https://github.com/urish/pull-request-community#adding-your-profile"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.githubButton}
-        >
-          <Icon path={mdiGithub} size={1} /> הוסיפו את עצמכם
-        </a>
-
-        {fitleredPeople.map((person) => (
-          <PersonCard key={person.github} person={person} />
-        ))}
+        <section id="about">
+          <h2>מי אנחנו?</h2>
+          קהילה זו נועדה לקשר בין מפתחים שרוצים לתרום לקוד פתוח ופרויקטים שזקוקים לתרומה וחרטה על
+          דגלה להנגיש את התרומה לקוד פתוח ולהפוך אותה לקלה ונעימה 😊
+        </section>
+        <section id="join">
+          <h2>הצטרף/י אלינו!</h2>
+          <p>
+            ניתן להוסיף את עצמכם/ן לrepository שלנו בגיט&nbsp;
+            <a
+              href="https://github.com/urish/pull-request-community#adding-your-profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.joinLink}
+            >
+              <u>כאן</u>
+            </a>
+          </p>
+        </section>
+        <section id="people">
+          {fitleredPeople.map((person) => (
+            <PersonCard key={person.github} person={person} />
+          ))}
+        </section>
       </main>
     </div>
   );
