@@ -12,7 +12,13 @@ export function PersonCard({ person }: IPersonProps) {
     flex: '1 0 21%',
     margin: 5,
   };
+  const githubHref = `https://github.com/${person.github}`;
   const icons: Record<string, IIconLinked> = {
+    [githubHref]: {
+      color: '#211F1F',
+      icon: mdiGithub,
+      href: githubHref,
+    },
     [person.twitter]: {
       color: '#55ACEE',
       href: person.twitter,
@@ -43,9 +49,6 @@ export function PersonCard({ person }: IPersonProps) {
       <h2>{person.name}</h2>
       <img src={`https://github.com/${person.github}.png?size=200`} className={styles.avatar} />
       <p>{person.description}</p>
-      <a href={`https://github.com/${person.github}`} target="_blank" rel="noopener noreferrer">
-        <Icon path={mdiGithub} size={1.5} color="#211F1F" />
-      </a>
       {Object.entries(icons)
         .filter(([key]) => key !== 'undefined')
         .map(([key, value]) => (
