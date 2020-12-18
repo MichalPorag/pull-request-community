@@ -38,12 +38,11 @@ export default function Home({ people }: IHomeProps) {
           <h2>הצטרף/י אלינו!</h2>
           <p>
             ניתן להוסיף את עצמכם/ן לrepository שלנו בגיט&nbsp;
+            {/* prettier-ignore */}
             <a
               href="https://github.com/urish/pull-request-community#adding-your-profile"
               target="_blank"
-              rel="noopener noreferrer"
-              className={styles.joinLink}
-            >
+              rel="noopener noreferrer">
               <u>כאן</u>
             </a>
           </p>
