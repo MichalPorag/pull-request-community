@@ -1,6 +1,6 @@
 # Pull Request Community Pages
 
-> View it online: https://pull-request.netlify.app/
+> View it online: https://pullrequest.co.il/
 
 ## Adding your profile
 
