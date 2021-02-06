@@ -12,7 +12,8 @@
       "twitter": "https://twitter.com/MichalPorag",
       "linkedin": "https://www.linkedin.com/in/michal-porag-9522b5142/",
       "website": "https://medium.com/@miporagi",
-      "description": "אני מיכל פורג, מפתחת פולסטאק ב-Skillset, סטודנטית למדעי המחשב באוניברסיטה הפתוחה ומנהלת את קהילת PullRequest. אני תורמת קוד בעיקר לפרויקט \"הייתי_שם\", זה אתר שמנציח עדויות של נפגעי אלימות במערכות יחסים מכל סוג ומקשר בינם לבין גורמים שיכולים לעזור להם (עוד בשלבי בנייה). אני אוהבת לצייר, לקרוא וחתולים."
+      "description": "אני מיכל פורג, מפתחת פולסטאק ב-Skillset, סטודנטית למדעי המחשב באוניברסיטה הפתוחה ומנהלת את קהילת PullRequest. אני תורמת קוד בעיקר לפרויקט \"הייתי_שם\", זה אתר שמנציח עדויות של נפגעי אלימות במערכות יחסים מכל סוג ומקשר בינם לבין גורמים שיכולים לעזור להם (עוד בשלבי בנייה). אני אוהבת לצייר, לקרוא וחתולים.",
+      "roles": ["Admin"]
     }
   ],
   "required": ["name", "github", "description"],
@@ -61,6 +62,14 @@
       "format": "uri",
       "examples": ["https://medium.com/@miporagi"]
     },
+    "website": {
+      "$id": "#/properties/stackoverflow",
+      "type": "string",
+      "title": "Stackoverflow profile link",
+      "description": "Your personal blog or website (it has to be about you)",
+      "format": "uri",
+      "examples": ["https://stackoverflow.com/users/1348195/benjamin-gruenbaum"]
+    },
     "description": {
       "$id": "#/properties/description",
       "type": "string",
@@ -69,6 +78,13 @@
       "examples": [
         "אני מיכל פורג, מפתחת פולסטאק ב-Skillset, סטודנטית למדעי המחשב באוניברסיטה הפתוחה ומנהלת את קהילת PullRequest. אני תורמת קוד בעיקר לפרויקט \"הייתי_שם\", זה אתר שמנציח עדויות של נפגעי אלימות במערכות יחסים מכל סוג ומקשר בינם לבין גורמים שיכולים לעזור להם (עוד בשלבי בנייה). אני אוהבת לצייר, לקרוא וחתולים."
       ]
+    },
+    "roles": {
+      "$id": "#/properties/roles",
+      "type": "array",
+      "title": "Community roles",
+      "description": "Only people who have role on pull request community",
+      "examples": [["Admin"]]
     }
   },
   "additionalProperties": true

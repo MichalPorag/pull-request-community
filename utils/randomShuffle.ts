@@ -1,4 +1,6 @@
-export function randomShuffle<T>(arr: T[]) {
+import { IPerson } from '../services/people';
+
+export function randomShuffle<T>(arr): IPerson {
   // Credit: https://stackoverflow.com/a/46545530/830623
   return arr
     .map((a) => ({ sort: Math.random(), value: a }))
