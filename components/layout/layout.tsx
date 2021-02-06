@@ -11,6 +11,8 @@ const Layout = ({ children }: LayoutProps) => {
     <div>
       <Head>
         <link rel="icon" href="/favicon.png" />
+        <meta property="image" content="/images/logo.png" />
+        <meta property="og:image" content="/images/logo.png" />
         <title>{title}</title>
         {metaContents && metaContents.map((meta, i) => <meta key={i} {...meta} />)}
       </Head>
