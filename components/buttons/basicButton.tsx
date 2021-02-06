@@ -6,6 +6,7 @@ const BasicButton = ({ children, className }: BasicButtonProps) => {
       <button className={`${className} BasicButton`}>{children}</button>
       <style jsx>{`
         .BasicButton {
+          user-select: none;
           cursor: pointer;
           color: white;
           font-size: 2.4rem;

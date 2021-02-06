@@ -42,9 +42,9 @@ const Navbar = () => {
         </div>
         <div className="navbar__wrapper">
           <BasicButton>
-            <p className="navbar__btn">
+            <a className="navbar__btn" href="https://github.com/urish/pull-request-community">
               <span>הוסיפו אותי</span> <Icon className="navbar__btn--icon" path={mdiGithub} />
-            </p>
+            </a>
           </BasicButton>
         </div>
       </div>
@@ -72,6 +72,7 @@ const Navbar = () => {
         }
 
         .navbar__btn {
+          user-select: none;
           display: flex;
           justify-content: center;
           align-items: center;
