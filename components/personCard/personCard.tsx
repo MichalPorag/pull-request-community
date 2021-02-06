@@ -1,4 +1,5 @@
 import { useMemo, useRef } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { mdiFacebook, mdiGithub, mdiLinkedin, mdiTwitter, mdiWeb, mdiStackOverflow } from '@mdi/js';
 import Icon from '@mdi/react';
 import { IPerson } from '../../services/people';
@@ -61,7 +62,8 @@ export function PersonCard({ person }: IPersonProps) {
           <p className={styles.card__headline}>{name}</p>
           <ShowMore
             text={description}
-            maxCharectars={150}
+            maxCharacter={150}
+            mobileMaxCharacter={40}
             defaultShowMoreMode={true}
             className={styles.card__desc}
             onCustomClick={onToggleCard}

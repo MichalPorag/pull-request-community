@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className="navbar__wrapper">
           <BasicButton>
             <p className="navbar__btn">
-              <span>הוסיפו אותי</span> <Icon path={mdiGithub} size={2} />
+              <span>הוסיפו אותי</span> <Icon className="navbar__btn--icon" path={mdiGithub} />
             </p>
           </BasicButton>
         </div>
@@ -74,9 +74,13 @@ const Navbar = () => {
         .navbar__btn {
           display: flex;
           justify-content: center;
+          align-items: center;
+          white-space: nowrap;
+          width: 150px;
         }
 
         .navbar__btn > span {
+          // font-size: 2rem;
           margin-left: 10px;
         }
 
@@ -127,6 +131,30 @@ const Navbar = () => {
         .navbar__tab-active.navbar__tab,
         .navbar__tab:hover {
           color: ${colors.secondary_color};
+        }
+
+        @media only screen and (max-width: 767px) {
+          .navbar__navs {
+            display: none;
+          }
+        }
+
+        @media only screen and (max-width: 600px) {
+          .navbar {
+            height: 100px;
+          }
+          .navbar__logo {
+            width: 70px;
+            height: 70px;
+          }
+
+          .navbar__btn {
+            width: 110px;
+          }
+
+          .navbar__btn > span {
+            font-size: 1.8rem;
+          }
         }
       `}</style>
     </div>

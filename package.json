@@ -13,6 +13,7 @@
     "next": "^10.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-responsive": "^8.2.0",
     "sass": "^1.32.0"
   },
   "devDependencies": {

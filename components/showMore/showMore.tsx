@@ -1,9 +1,11 @@
 import { useMemo, useRef, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 interface ShowMoreInterface {
   text: string;
   defaultShowMoreMode: boolean;
-  maxCharectars: number;
+  maxCharacter: number;
+  mobileMaxCharacter?: number;
   className?: string;
   onCustomClick?: (arg: boolean, elem: object) => void;
 }
@@ -11,20 +13,32 @@ interface ShowMoreInterface {
 const ShowMore = ({
   text,
   defaultShowMoreMode,
-  maxCharectars,
+  maxCharacter,
+  mobileMaxCharacter,
   className,
   onCustomClick,
 }: ShowMoreInterface) => {
   const element = useRef();
   const [showMore, setShowMore] = useState(defaultShowMoreMode);
-  const isShowMoreSupport = useMemo(() => text.length > maxCharectars, [text]);
+  const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+  const currentMaxCharacter = useMemo(() => {
+    if (mobileMaxCharacter) {
+      return isMobile ? mobileMaxCharacter : maxCharacter;
+    }
+
+    return maxCharacter;
+  }, [isMobile]);
+  const isShowMoreSupport = useMemo(() => text.length > currentMaxCharacter, [
+    currentMaxCharacter,
+    text,
+  ]);
   const content = useMemo(() => {
     if (isShowMoreSupport) {
-      return showMore ? `${text.substr(0, maxCharectars)} ...` : text;
+      return showMore ? `${text.substr(0, currentMaxCharacter)} ...` : text;
     }
 
     return text;
-  }, [text, showMore]);
+  }, [currentMaxCharacter, text, showMore]);
 
   const onToggleContent = () => {
     setShowMore(!showMore);
@@ -55,6 +69,10 @@ const ShowMore = ({
       `}</style>
     </p>
   );
+};
+
+ShowMore.defaultProps = {
+  mobileMaxCharacter: null,
 };
 
 export default ShowMore;
