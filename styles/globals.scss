@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  color: inherit;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+
+  *:focus {
+    outline: none;
+  }
+}
+
+
+
+html {
+  font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  direction: rtl;
+  background-color:#E8E8E8;
+  font-size: 10px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 9px;
+  }
+}

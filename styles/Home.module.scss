@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+
+  .cards__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & > [class^=person] {
+      margin-bottom: 45px;
+      margin-left: 30px;
+    }
+  }
+}
