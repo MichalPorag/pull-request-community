@@ -6,7 +6,8 @@ import BasicButton from '../../buttons/basicButton';
 import colors from '../../../styles/colors';
 import { useRouter } from 'next/router';
 
-const paths = [{ path: '/mentors', name: 'מנטורים' }];
+// const paths = [{ path: '/mentors', name: 'מנטורים' }];
+const paths = [];
 
 const Navbar = () => {
   const { asPath } = useRouter();
@@ -26,13 +27,17 @@ const Navbar = () => {
                 <Title className="navbar__title">קהילת Pull Request</Title>
               </a>
             </Link>
-            <div className="navbar__tabs">
-              {paths.map(({ path, name }, i) => (
-                <Link key={path + name + i} shallow href={path}>
-                  <a className={`navbar__tab ${asPath === path && 'navbar__tab-active'}`}>{name}</a>
-                </Link>
-              ))}
-            </div>
+            {paths && (
+              <div className="navbar__tabs">
+                {paths.map(({ path, name }, i) => (
+                  <Link key={path + name + i} shallow href={path}>
+                    <a className={`navbar__tab ${asPath === path && 'navbar__tab-active'}`}>
+                      {name}
+                    </a>
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
         </div>
         <div className="navbar__wrapper">
