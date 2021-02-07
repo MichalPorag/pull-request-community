@@ -42,7 +42,7 @@ const Navbar = () => {
         </div>
         <div className="navbar__wrapper">
           <BasicButton>
-            <a className="navbar__btn" href="https://github.com/urish/pull-request-community">
+            <a className="navbar__btn" href="https://github.com/urish/pull-request-community#adding-your-profile">
               <span>הוסיפו אותי</span> <Icon className="navbar__btn--icon" path={mdiGithub} />
             </a>
           </BasicButton>
