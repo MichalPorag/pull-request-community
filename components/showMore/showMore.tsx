@@ -51,7 +51,7 @@ const ShowMore = ({
       {content}{' '}
       {isShowMoreSupport && (
         <button onClick={onToggleContent} className="show-more__btn">
-          {showMore ? 'קרא עוד' : 'קבץ'}
+          {showMore ? 'קרא עוד' : 'כווץ'}
         </button>
       )}
       <style jsx>{`
