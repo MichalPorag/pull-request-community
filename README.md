@@ -50,7 +50,7 @@ You can add / update your personal profile by creating a Pull Request to this re
    }
    ```
 
-   The `name`, `github`, and `description` fields are required and **need to be in Hebrew**.  
+   The `name`, and `description` fields are required and **need to be in Hebrew**.  
    All the other fields are optional.
 
    Use the `description` field to introduce yourself: technologies that you love, hobbies, fun-facts,
