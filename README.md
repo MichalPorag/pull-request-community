@@ -86,3 +86,15 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Contributing to this project
+
+please follow these steps if you wish to join us in developing this project:
+
+1. Fork the current Repo
+2. Clone the Forked Repo to your local machine
+3. Make the necessary changes on your local machine and commit the changes
+
+### Important Notes
+
+- Before any commit, [make sure to set a remote as upstream](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork) (if not set) and fetch the most recent changes from that. Solve any conflicts if arise.
